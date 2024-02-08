@@ -9,3 +9,12 @@ span.price {
     margin-right:5px;
     margin-bottom:10px;
 }
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
