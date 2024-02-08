@@ -18,3 +18,24 @@ footer {
 h1 {
     text-align: center;
 }
+
+.subheading {
+    font-weight: bold;
+    color:rgb(112, 214, 167)
+}
+
+div.about {
+    text-align: center;
+    h4 {
+        text-decoration: underline;
+        color: rgb(93, 122, 185);
+    }
+}
+
+a.hidden {
+    text-decoration: none;
+    color:rgb(0, 195, 255);
+}
+a.hidden:hover{
+    color:rgb(95, 95, 185);
+}
