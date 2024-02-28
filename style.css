@@ -1,0 +1,83 @@
+html, body{
+    margin:0px;
+    padding:0px;
+    background-color:rgb(184, 184, 184);
+    font-size:large;
+    font-family: sans-serif;
+}
+
+/* The sidebar menu */
+ #filters {
+    height: 100%;
+    width: 160px; /* Set the width of the sidebar */
+    position:fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 0; /* Stay on top */
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #5f5d5d; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px;
+  }
+  
+  /* The navigation menu links */
+  #filters button {
+    padding: 6px 8px 6px 16px;
+    margin-bottom:10px;
+    width:120px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  #filters button:hover {
+    color: #f1f1f1;
+  }
+
+  #filters button.pressed {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color:rgb(69, 117, 189);
+    display: block;
+  }
+  
+  /* Style page content */
+  #page {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+
+  #header {
+    padding: 20px;
+    text-align: center;
+    background: #424040;
+    color: white;
+    font-size: 30px;
+  }
+
+  #navbar {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 160px;
+    padding: 0;
+    display:inline;
+  }
+
+  li.navbar {
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    height: 100%;
+    border-right-style: solid;
+    border-left-style: solid;
+    background-color: #5f5d5d;
+    border-color:rgb(69, 117, 189);
+
+    a {
+        text-decoration: none;
+        color:black;
+    }
+  }

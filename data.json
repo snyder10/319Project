@@ -1,0 +1,138 @@
+{
+    "pages": {
+        "grocery": {
+            "fileName": "./grocery.html",
+            "filters":{},
+            "items": {}
+        },
+        "sporting goods": {
+            "fileName": "./sportingGoods.html",
+            "filters": {
+                "bikes": [
+                    "mountain bike",
+                    "training bike",
+                    "electric bike"
+                ],
+                "sports": [
+                    "basketball",
+                    "basketball hoop",
+                    "football",
+                    "football helmet",
+                    "volleyball",
+                    "baseball",
+                    "baseball bat",
+                    "softball",
+                    "softball bat"
+                ],
+                "deals": [
+                    "basketball",
+                    "mountain bike",
+                    "electric bike"
+                ]
+            },
+            "items": {
+                "mountain bike": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "training bike": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "electric bike": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "basketball": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "basketball hoop": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "football": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "football helmet": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "volleyball": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "baseball": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "baseball bat": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "softball": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "softball bat": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                }
+            }
+        },
+        "apparel": {
+            "fileName": "./apparel.html",
+            "filters": {},
+            "items": {}
+        }
+    }
+}
