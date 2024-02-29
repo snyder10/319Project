@@ -4,25 +4,88 @@ let filters = [];
 let displayedItems = [];
 let information;
 
+let sortingPriority;
+
+document.getElementById("sort-select-values").addEventListener("change", function() {
+    changeSort(this.value);
+});
+
+function changeSort(sortSelect){
+    sortingPriority = information["pages"][pageName]["sortOptions"][sortSelect];
+    sortElements(sortingPriority);
+}
+
+function sortElements(sortPriority){
+
+    const items = document.querySelectorAll(".items-container");
+
+
+    const itemsArray = Array.from(items).map(item => {
+        const price = parseFloat(item.textContent.split('$')[1]);
+        const name = item.textContent.split(':')[0];
+        const inventory = parseInt(item.textContent.split(':')[2]);
+
+
+        return { item, price, name, inventory};
+    });
+
+
+    itemsArray.sort((a, b) => {
+
+        for (let i = 0; i < sortPriority.length; i++) {
+            let prop = sortPriority[i]["priority"];
+            console.log(prop);
+            let first;
+            let second;
+            if (sortPriority[i]["direction"] === "ascending"){
+                first = a;
+                second = b;
+            } else {
+                console.log("test")
+                first = b;
+                second = a;
+            }
+            console.log(first[prop] + " " + second[prop]);
+            if (first[prop] !== second[prop]) {
+                if(prop === "price" || prop === "inventory") {
+                    console.log(first[prop] - second[prop])
+                    return first[prop] - second[prop];
+                } else {
+                    return first[prop].localeCompare(second[prop], undefined, { sensitivity: 'base' });
+                }
+            }
+        }
+        return 0;
+    });
+
+    const container = document.getElementById("page");
+    itemsArray.forEach(({ item }) => {
+        container.appendChild(item);
+    });
+}
+
 function changeFilters(filter){
-    console.log(displayedItems)
-    itemInfo = information["pages"][pageName]["items"]
+    let page = document.getElementById("page");
+
     if (filters.includes(filter)){
         filterButton = document.getElementById(filter);
         filterButton.classList.remove("pressed");
+
         filters.splice(filters.indexOf(filter), 1)
+
         if(filters.length == 0){
+
+            itemInfo = information["pages"][pageName]["items"]
+
             for (item in itemInfo){
-                page = document.getElementById("page");
-                displayItem(item, itemInfo, page)
+                if(!displayedItems.includes(item)){
+                    displayItem(item, itemInfo, page)
+                }
             }
         }
         else {
-            console.log(information["pages"][pageName]["filters"][filter])
             for (item of information["pages"][pageName]["filters"][filter]){
-                console.log("testing: " + item)
-                if (displayedItems.includes(item)){
-                    page = document.getElementById("page");
+                if (displayedItems.includes(item) && !inFilters(item, information)){
                     removeItem(item, page);
                 }
             }
@@ -31,20 +94,18 @@ function changeFilters(filter){
         filterButton = document.getElementById(filter);
         filterButton.classList.add("pressed");
         if (filters.length == 0){
-            for (item of displayedItems){
-                console.log("testing: " + item)
+            let iterableDisplayedItems = displayedItems.slice();
+            for (item of iterableDisplayedItems){
                 if (!information["pages"][pageName]["filters"][filter].includes(item)){
-                    console.log(information["pages"][pageName]["filters"][filter] + ": " + item)
-                    page = document.getElementById("page");
                     removeItem(item, page);
-                } else {
-                    console.log(item);
                 }
             }
         } else {
+
+            itemInfo = information["pages"][pageName]["items"]
+
             for (item of information["pages"][pageName]["filters"][filter]){
                 if (!displayedItems.includes(item)){
-                    page = document.getElementById("page");
                     displayItem(item, itemInfo, page);
                 }
             }
@@ -52,13 +113,24 @@ function changeFilters(filter){
         filters.push(filter)
     }
 
-    // fetch("./data.json")
-    // .then(response => response.json())
-    // .then(pages => resetPage(pages));
+    sortElements(sortingPriority)
 }
 
 function renderPage(pages){
     information = pages;
+
+    sortSelect = document.getElementById("sort-select-values");
+
+    for (let sortOption in pages["pages"][pageName]["sortOptions"]){
+        if(sortingPriority == null){
+            sortingPriority = pages["pages"][pageName]["sortOptions"][sortOption];
+        }
+        sortElement = document.createElement("option");
+        sortElement.value = sortOption;
+        sortElement.textContent = sortOption;
+        sortSelect.appendChild(sortElement);
+    }
+
     navbar = document.getElementById("navbar");
     for (let pageName in pages["pages"]){
         listElement = document.createElement("li")
@@ -70,7 +142,6 @@ function renderPage(pages){
     for(let filter in pages["pages"][pageName]["filters"]){
         filterDiv = document.createElement("div");
         filterDiv.innerHTML = `<button id="${filter}", type="button", onclick="changeFilters('${filter}')">${filter}</button>`
-        console.log(filterDiv)
         sidebar.appendChild(filterDiv);
     }
 
@@ -79,18 +150,20 @@ function renderPage(pages){
     for(let item in itemInfo){
         displayItem(item, itemInfo, page);
     }
+
+    sortElements(sortingPriority);
 }
 
 function displayItem(item, itemInfo, page) {
     div = document.createElement("div");
     div.id = item.split(" ").join("_");
-    div.innerHTML = `<p>${item}: $${itemInfo[item]["price"]}</p>`;
+    div.classList.add("items-container")
+    div.innerHTML = `<p>${item}: $${itemInfo[item]["price"]}</p><p>inventory: ${itemInfo[item]["inventory"]}</p><br>`;
     page.appendChild(div);
     displayedItems.push(item);
 }
 
 function removeItem(item, page) {
-    console.log(item.split(" ").join("_"))
     child = document.getElementById(item.split(" ").join("_"))
     page.removeChild(child);
     displayedItems.splice(displayedItems.indexOf(item), 1);
@@ -102,7 +175,6 @@ function inFilters(item, pages){
     }
     for (filter of filters){
         for (filteredItem of pages["pages"][pageName]["filters"][filter]){
-            console.log(filteredItem)
             if (filteredItem === item){
                 return true;
             }
@@ -110,31 +182,6 @@ function inFilters(item, pages){
     }
     return false;
 }
-
-// function resetPage(pages){
-//     sidebar = document.getElementById("filters");
-//     sidebar.innerHTML = "";
-//     for(let filter in pages["pages"][pageName]["filters"]){
-//         filterDiv = document.createElement("div");
-//         if (filters.includes(filter)){
-//             filterDiv.innerHTML = `<button type="button", onclick="changeFilters('${filter}')" class=pressed>${filter}</button>`
-//         } else {
-//             filterDiv.innerHTML = `<button type="button", onclick="changeFilters('${filter}')">${filter}</button>`
-//         }
-//         sidebar.appendChild(filterDiv);
-//     }
-
-//     page = document.getElementById("page")
-//     itemInfo = pages["pages"][pageName]["items"]
-//     page.innerHTML = "";
-//     for(let item in itemInfo){
-//         if(inFilters(item, pages)){
-//             div = document.createElement("div");
-//             div.innerHTML = `<p>${item}: $${itemInfo[item]["price"]}</p>`;
-//             page.appendChild(div);
-//         }
-//     }
-// }
 
 fetch("./data.json")
     .then(response => response.json())

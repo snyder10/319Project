@@ -34,13 +34,13 @@
                 "mountain bike": {
                     "price": "197.00",
                     "original price": "254.00",
-                    "inventory": 10,
+                    "inventory": 112,
                     "sold this week": 6,
                     "sold last week": 4,
                     "image": ""
                 },
                 "training bike": {
-                    "price": "197.00",
+                    "price": "198.00",
                     "original price": "254.00",
                     "inventory": 10,
                     "sold this week": 6,
@@ -127,6 +127,28 @@
                     "sold last week": 4,
                     "image": ""
                 }
+            },
+            "sortOptions":{
+                "Price: Low to High": [
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Price: High to Low": [
+                    {"priority": "price", "direction": "descending"},
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Inventory: Low to High": [
+                    {"priority": "inventory", "direction": "ascending"},
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Inventory: High to Low": [
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "name", "direction": "ascending"}
+                ]
             }
         },
         "apparel": {
