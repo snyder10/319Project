@@ -9,7 +9,7 @@ html, body{
 /* The sidebar menu */
  #filters {
     height: 100%;
-    width: 160px; /* Set the width of the sidebar */
+    width: 200px; /* Set the width of the sidebar */
     position:fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 0; /* Stay on top */
     top: 0px;
@@ -46,7 +46,7 @@ html, body{
   
   /* Style page content */
   #page {
-    margin-left: 160px; /* Same as the width of the sidebar */
+    margin-left: 200px; /* Same as the width of the sidebar */
     padding: 0px 10px;
   }
 
@@ -61,7 +61,7 @@ html, body{
   #navbar {
     list-style-type: none;
     margin: 0;
-    margin-left: 160px;
+    margin-left: 200px;
     padding: 0;
     display:inline;
   }
@@ -80,4 +80,12 @@ html, body{
         text-decoration: none;
         color:black;
     }
+  }
+
+  #sort-select {
+    position:fixed;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #750909;
   }
