@@ -48,6 +48,7 @@ html, body{
   #page {
     margin-left: 200px; /* Same as the width of the sidebar */
     padding: 0px 10px;
+    display:inline-block;
   }
 
   #header {
@@ -88,4 +89,28 @@ html, body{
     margin-top: 10px;
     margin-left: 10px;
     color: #750909;
+  }
+
+  li.items-container {
+    margin: 20px;
+    display: inline-block;
+    width: 350px;
+    color: #253a7c;
+    background-color: #ffffff;
+    align-items: center;
+  }
+
+  div.item-image {
+    align-self: center;
+    align-items: center;
+  }
+
+  div.item {
+    align-self: center;
+    background-color:#ffffff;
+    width: 350px;
+    text-align: center;
+  }
+  s {
+    color: red;
   }

@@ -21,7 +21,8 @@ function sortElements(sortPriority){
 
 
     const itemsArray = Array.from(items).map(item => {
-        const price = parseFloat(item.textContent.split('$')[1]);
+        let split = item.textContent.split('$');
+        const price = parseFloat(split[split.length - 1]);
         const name = item.textContent.split(':')[0];
         const inventory = parseInt(item.textContent.split(':')[2]);
 
@@ -155,11 +156,15 @@ function renderPage(pages){
 }
 
 function displayItem(item, itemInfo, page) {
-    div = document.createElement("div");
-    div.id = item.split(" ").join("_");
-    div.classList.add("items-container")
-    div.innerHTML = `<p>${item}: $${itemInfo[item]["price"]}</p><p>inventory: ${itemInfo[item]["inventory"]}</p><br>`;
-    page.appendChild(div);
+    li = document.createElement("li");
+    li.id = item.split(" ").join("_");
+    li.classList.add("items-container")
+    if(itemInfo[item]["price"] != itemInfo[item]["original price"]){
+        li.innerHTML = `<div class="item-image"><img src=${itemInfo[item]["image"]} width=350 height=350 class="item-image"></div><hr><div class="item"><p>${item}: <s> $${itemInfo[item]["original price"]}</s> $${itemInfo[item]["price"]}</p><p>Inventory: ${itemInfo[item]["inventory"]}</p></div>`;
+    } else {
+        li.innerHTML = `<div class="item-image"><img src=${itemInfo[item]["image"]} width=350 height=350 class="item-image"></div><hr><div class="item"><p>${item}: $${itemInfo[item]["price"]}</p><p>Inventory: ${itemInfo[item]["inventory"]}</p></div>`;
+    }
+    page.appendChild(li);
     displayedItems.push(item);
 }
 

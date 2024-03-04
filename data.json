@@ -1,37 +1,37 @@
 {
     "pages": {
-        "grocery": {
+        "Grocery": {
             "fileName": "./grocery.html",
             "filters":{},
             "items": {}
         },
-        "sporting goods": {
+        "Sporting Goods": {
             "fileName": "./sportingGoods.html",
             "filters": {
                 "bikes": [
-                    "mountain bike",
-                    "training bike",
-                    "electric bike"
+                    "Mountain Bike",
+                    "Training Bike",
+                    "Electric Bike"
                 ],
                 "sports": [
-                    "basketball",
-                    "basketball hoop",
-                    "football",
-                    "football helmet",
-                    "volleyball",
-                    "baseball",
-                    "baseball bat",
-                    "softball",
-                    "softball bat"
+                    "Basketball",
+                    "Basketball Hoop",
+                    "Football",
+                    "Football Helmet",
+                    "Volleyball",
+                    "Baseball",
+                    "Baseball Bat",
+                    "Softball",
+                    "Softball Bat"
                 ],
                 "deals": [
-                    "basketball",
-                    "mountain bike",
-                    "electric bike"
+                    "Basketball",
+                    "Mountain Bike",
+                    "Electric Bike"
                 ]
             },
             "items": {
-                "mountain bike": {
+                "Mountain Bike": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 112,
@@ -39,7 +39,7 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "training bike": {
+                "Training Bike": {
                     "price": "198.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -47,7 +47,7 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "electric bike": {
+                "Electric Bike": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -55,7 +55,15 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "basketball": {
+                "Basketball": {
+                    "price": "197.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": "./images/basketball.JPG"
+                },
+                "Basketball Hoop": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -63,7 +71,7 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "basketball hoop": {
+                "Football": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -71,7 +79,7 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "football": {
+                "Football Helmet": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -79,7 +87,7 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "football helmet": {
+                "Volleyball": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -87,7 +95,15 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "volleyball": {
+                "Baseball": {
+                    "price": "254.00",
+                    "original price": "254.00",
+                    "inventory": 10,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "image": ""
+                },
+                "Baseball Bat": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -95,7 +111,7 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "baseball": {
+                "Softball": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -103,23 +119,7 @@
                     "sold last week": 4,
                     "image": ""
                 },
-                "baseball bat": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
-                    "image": ""
-                },
-                "softball": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
-                    "image": ""
-                },
-                "softball bat": {
+                "Softball Bat": {
                     "price": "197.00",
                     "original price": "254.00",
                     "inventory": 10,
@@ -151,7 +151,7 @@
                 ]
             }
         },
-        "apparel": {
+        "Apparel": {
             "fileName": "./apparel.html",
             "filters": {},
             "items": {}
