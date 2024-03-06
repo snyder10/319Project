@@ -95,17 +95,32 @@ html, body{
     margin: 20px;
     display: inline-block;
     width: 350px;
-    color: #253a7c;
     background-color: #ffffff;
     align-items: center;
+    a {
+      text-decoration: none;
+      color: #253a7c;
+    }
   }
 
   div.item-image {
     align-self: center;
+    margin:0px;
     align-items: center;
   }
 
+  img.item-image {
+    align-self:center;
+    margin:0px;
+  }
+
+  hr {
+    margin:0px;
+    border-style:dashed;
+  }
+
   div.item {
+    margin:0px;
     align-self: center;
     background-color:#ffffff;
     width: 350px;
