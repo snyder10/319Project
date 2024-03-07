@@ -24,6 +24,8 @@ function displayItem(pages) {
     page.appendChild(li);
 }
 
+
+
 fetch("./data.json")
     .then(response => response.json())
     .then(pages => displayItem(pages));

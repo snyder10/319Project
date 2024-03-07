@@ -154,7 +154,7 @@ function renderPage(pages){
 
     sortElements(sortingPriority);
 }
-
+ 
 function displayItem(item, itemInfo, page) {
     li = document.createElement("li");
     li.id = item.split(" ").join("_");
