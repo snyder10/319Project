@@ -113,7 +113,7 @@ function changeFilters(filter){
         }
         filters.push(filter)
     }
-
+ 
     sortElements(sortingPriority)
 }
 
