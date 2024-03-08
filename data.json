@@ -27,7 +27,7 @@
                     "sold this week": 75,
                     "sold last week": 67,
                     "rating": 3,
-                    "image": "./images/_.JPG"
+                    "image": "./images/Apple.JPG"
                 },
                 "Bannana": {
                     "price": "0.31/lb",
@@ -36,7 +36,7 @@
                     "sold this week": 10,
                     "sold last week": 45,
                     "rating": 5,
-                    "image": "./images/_.JPG"
+                    "image": "./images/Bannana.JPG"
                 },
                 "Orange": {
                     "price": "3.62/lb",
@@ -45,7 +45,7 @@
                     "sold this week": 8,
                     "sold last week": 20,
                     "rating": 4,
-                    "image": "./images/_.JPG"
+                    "image": "./images/Orange.JPG"
                 },
                 "White Bread": {
                     "price": "1.79",
@@ -54,7 +54,7 @@
                     "sold this week": 75,
                     "sold last week": 67,
                     "rating": 3,
-                    "image": "./images/_.JPG"
+                    "image": "./images/White_Bread.JPG"
                 },
                 "Canned Tuna": {
                     "price": "1.99",
@@ -63,7 +63,7 @@
                     "sold this week": 1,
                     "sold last week": 4,
                     "rating": 1,
-                    "image": "./images/_.JPG"
+                    "image": "./images/Canned_Tuna.JPG"
                 },
                 "Hot Dog Buns": {
                     "price": "1.59",
@@ -72,7 +72,7 @@
                     "sold this week": 75,
                     "sold last week": 106,
                     "rating": 3,
-                    "image": "./images/_.JPG"
+                    "image": "./images/Hot_Dog_Buns.JPG"
                 },
                 "Whole Wheat Bread": {
                     "price": "2.29",
@@ -81,7 +81,7 @@
                     "sold this week": 41,
                     "sold last week": 52,
                     "rating": 4,
-                    "image": "./images/_.JPG"
+                    "image": "./images/Whole_Wheat_Bread.JPG"
                 },
                 "Chicken Thigh": {
                     "price": "2.99/lb",
@@ -90,16 +90,16 @@
                     "sold this week": 41,
                     "sold last week": 66,
                     "rating": 5,
-                    "image": "./images/_.JPG"
+                    "image": "./images/Chicken_Thigh.JPG"
                 },
-                "15% Lean Ground Beef": {
+                "85% Lean Ground Beef": {
                     "price": "4.69/lb",
                     "original price": "4.69/lb",
                     "inventory": 113,
                     "sold this week": 60,
                     "sold last week": 72,
                     "rating": 4,
-                    "image": "./images/_.JPG"
+                    "image": "./images/85_Lean_Beef.JPG"
                 }
             },
             "sortOptions":{
