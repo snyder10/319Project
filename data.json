@@ -2,8 +2,128 @@
     "pages": {
         "Grocery": {
             "fileName": "./grocery.html",
-            "filters":{},
-            "items": {}
+            "filters":{
+                "Fruit": [
+                    "Apple",
+                    "Bannana",
+                    "Orange"
+                ],
+                "Bread": [
+                    "White Bread",
+                    "Hot Dog Bun",
+                    "Whole Wheat Bread"
+                ],
+                "Meat": [
+                    "Chicken Thigh",
+                    "Canned Tuna",
+                    "15% Lean Ground Beef"
+                ]
+            },
+            "items": {
+                "Apple": {
+                    "price": "1.59/lb",
+                    "original price": "1.79/lb",
+                    "inventory": 230,
+                    "sold this week": 75,
+                    "sold last week": 67,
+                    "rating": 3,
+                    "image": "./images/_.JPG"
+                },
+                "Bannana": {
+                    "price": "0.31/lb",
+                    "original price": "254.00",
+                    "inventory": 30,
+                    "sold this week": 10,
+                    "sold last week": 45,
+                    "rating": 5,
+                    "image": "./images/_.JPG"
+                },
+                "Orange": {
+                    "price": "3.62/lb",
+                    "original price": "3.62/lb",
+                    "inventory": 15,
+                    "sold this week": 8,
+                    "sold last week": 20,
+                    "rating": 4,
+                    "image": "./images/_.JPG"
+                },
+                "White Bread": {
+                    "price": "1.79",
+                    "original price": "1.79",
+                    "inventory": 230,
+                    "sold this week": 75,
+                    "sold last week": 67,
+                    "rating": 3,
+                    "image": "./images/_.JPG"
+                },
+                "Canned Tuna": {
+                    "price": "1.99",
+                    "original price": "1.99",
+                    "inventory": 63,
+                    "sold this week": 1,
+                    "sold last week": 4,
+                    "rating": 1,
+                    "image": "./images/_.JPG"
+                },
+                "Hot Dog Buns": {
+                    "price": "1.59",
+                    "original price": "1.75",
+                    "inventory": 120,
+                    "sold this week": 75,
+                    "sold last week": 106,
+                    "rating": 3,
+                    "image": "./images/_.JPG"
+                },
+                "Whole Wheat Bread": {
+                    "price": "2.29",
+                    "original price": "2.29",
+                    "inventory": 46,
+                    "sold this week": 41,
+                    "sold last week": 52,
+                    "rating": 4,
+                    "image": "./images/_.JPG"
+                },
+                "Chicken Thigh": {
+                    "price": "2.99/lb",
+                    "original price": "3.29/lb",
+                    "inventory": 75,
+                    "sold this week": 41,
+                    "sold last week": 66,
+                    "rating": 5,
+                    "image": "./images/_.JPG"
+                },
+                "15% Lean Ground Beef": {
+                    "price": "4.69/lb",
+                    "original price": "4.69/lb",
+                    "inventory": 113,
+                    "sold this week": 60,
+                    "sold last week": 72,
+                    "rating": 4,
+                    "image": "./images/_.JPG"
+                }
+            },
+            "sortOptions":{
+                "Price: Low to High": [
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Price: High to Low": [
+                    {"priority": "price", "direction": "descending"},
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Inventory: Low to High": [
+                    {"priority": "inventory", "direction": "ascending"},
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Inventory: High to Low": [
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "name", "direction": "ascending"}
+                ]
+            }
         },
         "Sporting Goods": {
             "fileName": "./sportingGoods.html",
@@ -37,6 +157,7 @@
                     "inventory": 112,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 5,
                     "image": "./images/Mountain_Bike.JPG"
                 },
                 "Training Bike": {
@@ -45,6 +166,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 3,
                     "image": "./images/Training_Bike.JPG"
                 },
                 "Electric Bike": {
@@ -53,6 +175,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 5,
                     "image": "./images/Electric_Bike.JPG"
                 },
                 "Basketball": {
@@ -61,6 +184,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 5,
                     "image": "./images/basketball.JPG"
                 },
                 "Basketball Hoop": {
@@ -69,6 +193,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 4,
                     "image": "./images/Basketball_Hoop.JPG"
                 },
                 "Football": {
@@ -77,6 +202,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 3,
                     "image": "./images/Football.JPG"
                 },
                 "Football Helmet": {
@@ -85,6 +211,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 5,
                     "image": "./images/Football_Helmet.JPG"
                 },
                 "Volleyball": {
@@ -93,6 +220,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 5,
                     "image": "./images/Volleyball.JPG"
                 },
                 "Baseball": {
@@ -101,6 +229,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 4,
                     "image": "./images/Baseball.JPG"
                 },
                 "Baseball Bat": {
@@ -109,6 +238,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 3,
                     "image": "./images/Baseball_Bat.JPG"
                 },
                 "Softball": {
@@ -117,6 +247,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 3,
                     "image": "./images/Softball.JPG"
                 },
                 "Softball Bat": {
@@ -125,6 +256,7 @@
                     "inventory": 10,
                     "sold this week": 6,
                     "sold last week": 4,
+                    "rating": 4,
                     "image": "./images/Softball_Bat.JPG"
                 }
             },
