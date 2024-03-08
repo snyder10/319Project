@@ -285,8 +285,128 @@
         },
         "Apparel": {
             "fileName": "./apparel.html",
-            "filters": {},
-            "items": {}
+            "filters": {
+                "shoes": [
+                    "Black Shoes",
+                    "White Shoes",
+                    "Beige Sneakers"
+                ],
+                "clothes": [
+                    "Blue Jeans",
+                    "Black Jacket",
+                    "Long Sleeve Shirt"
+                ],
+                "Accessories": [
+                    "Sun Glasses",
+                    "Leather Hat",
+                    "Wrist Watch"
+                ]
+            },
+            "items": {
+                "Black Shoes": {
+                    "price": "45.99",
+                    "original price": "45.99",
+                    "inventory": 12,
+                    "sold this week": 2,
+                    "sold last week": 4,
+                    "rating": 5,
+                    "image": "./images/Black_Shoes.JPG"
+                },
+                "White Shoes": {
+                    "price": "45.99",
+                    "original price": "45.99",
+                    "inventory": 14,
+                    "sold this week": 1,
+                    "sold last week": 7,
+                    "rating": 5,
+                    "image": "./images/White_Shoes.JPG"
+                },
+                "Blue Jeans": {
+                    "price": "25.00",
+                    "original price": "37.99",
+                    "inventory": 112,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "rating": 5,
+                    "image": "./images/Blue_Jeans.JPG"
+                },
+                "Beige Sneakers": {
+                    "price": "27.99",
+                    "original price": "29.99",
+                    "inventory": 53,
+                    "sold this week": 7,
+                    "sold last week": 4,
+                    "rating": 3,
+                    "image": "./images/Beige_Sneakers.JPG"
+                },
+                "Black Jacket": {
+                    "price": "35.99",
+                    "original price": "35.99",
+                    "inventory": 41,
+                    "sold this week": 6,
+                    "sold last week": 2,
+                    "rating": 4,
+                    "image": "./images/Black_Jacket.JPG"
+                },
+                "Long_Sleeve_Shirt": {
+                    "price": "21.00",
+                    "original price": "24.99",
+                    "inventory": 142,
+                    "sold this week": 7,
+                    "sold last week": 11,
+                    "rating": 5,
+                    "image": "./images/Long_Sleeve_Shirt.JPG"
+                },
+                "Sun Glasses": {
+                    "price": "157.00",
+                    "original price": "197.00",
+                    "inventory": 15,
+                    "sold this week": 0,
+                    "sold last week": 1,
+                    "rating": 4,
+                    "image": "./images/Sun_Glasses.JPG"
+                },
+                "Leather Hat": {
+                    "price": "21.49",
+                    "original price": "26.00",
+                    "inventory": 53,
+                    "sold this week": 6,
+                    "sold last week": 4,
+                    "rating": 5,
+                    "image": "./images/Leather_Hat.JPG"
+                },
+                "Wrist Watch": {
+                    "price": "1859.00",
+                    "original price": "1859.00",
+                    "inventory": 1,
+                    "sold this week": 0,
+                    "sold last week": 0,
+                    "rating": 5,
+                    "image": "./images/Wrist_Watch.JPG"
+                }
+            },
+            "sortOptions":{
+                "Price: Low to High": [
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Price: High to Low": [
+                    {"priority": "price", "direction": "descending"},
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Inventory: Low to High": [
+                    {"priority": "inventory", "direction": "ascending"},
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "name", "direction": "ascending"}
+                ],
+                "Inventory: High to Low": [
+                    {"priority": "inventory", "direction": "descending"},
+                    {"priority": "price", "direction": "ascending"},
+                    {"priority": "name", "direction": "ascending"}
+                ]
+            }
         }
     }
 } 
