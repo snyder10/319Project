@@ -74,6 +74,11 @@ if(pageName === "Product Page") {
             }
         }
     }
+} else if (pageName === "About") {
+    function renderPage(pages){
+        let navbar = document.getElementById("navbar");
+        renderNavbar(pages, navbar); 
+    }
 } else {
     function renderPage(pages){
         information = pages;
