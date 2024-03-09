@@ -22,6 +22,11 @@
                     "Chicken Thigh",
                     "Canned Tuna",
                     "15% Lean Ground Beef"
+                ],
+                "Deals": [
+                    "Apple",
+                    "Hot Dog Buns",
+                    "Chicken Thigh"
                 ]
             },
             "items": {
@@ -36,7 +41,7 @@
                 },
                 "Banana": {
                     "price": "0.31/lb",
-                    "original price": "254.00",
+                    "original price": "0.31/lb",
                     "inventory": 30,
                     "sold this week": 10,
                     "sold last week": 45,
@@ -133,12 +138,12 @@
         "Sporting Goods": {
             "fileName": "./sportingGoods.html",
             "filters": {
-                "bikes": [
+                "Bikes": [
                     "Mountain Bike",
                     "Exercise Bike",
                     "Electric Bike"
                 ],
-                "sports": [
+                "Sports": [
                     "Basketball",
                     "Basketball Hoop",
                     "Football",
@@ -149,7 +154,7 @@
                     "Softball",
                     "Softball Bat"
                 ],
-                "deals": [
+                "Deals": [
                     "Basketball",
                     "Mountain Bike",
                     "Electric Bike"
@@ -305,6 +310,13 @@
                     "Sun Glasses",
                     "Leather Hat",
                     "Wrist Watch"
+                ],
+                "Deals": [
+                    "Long Sleeve Shirt",
+                    "Leather Hat",
+                    "Blue Jeans",
+                    "Beige Sneakers",
+                    "Sun Glasses"
                 ]
             },
             "items": {
