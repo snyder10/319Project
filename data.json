@@ -301,12 +301,12 @@
         "Apparel": {
             "fileName": "./apparel.html",
             "filters": {
-                "shoes": [
+                "Shoes": [
                     "Black Shoes",
                     "White Shoes",
                     "Beige Sneakers"
                 ],
-                "clothes": [
+                "Clothes": [
                     "Blue Jeans",
                     "Black Jacket",
                     "Long Sleeve Shirt"
