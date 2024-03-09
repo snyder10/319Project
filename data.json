@@ -1,11 +1,16 @@
 {
+    "home": {
+        "trending-items": {
+            "":""
+        }
+    },
     "pages": {
         "Grocery": {
             "fileName": "./grocery.html",
             "filters":{
                 "Fruit": [
                     "Apple",
-                    "Bannana",
+                    "Banana",
                     "Orange"
                 ],
                 "Bread": [
@@ -29,14 +34,14 @@
                     "rating": 3,
                     "image": "./images/Apple.JPG"
                 },
-                "Bannana": {
+                "Banana": {
                     "price": "0.31/lb",
                     "original price": "254.00",
                     "inventory": 30,
                     "sold this week": 10,
                     "sold last week": 45,
                     "rating": 5,
-                    "image": "./images/Bannana.JPG"
+                    "image": "./images/Banana.JPG"
                 },
                 "Orange": {
                     "price": "3.62/lb",
@@ -130,7 +135,7 @@
             "filters": {
                 "bikes": [
                     "Mountain Bike",
-                    "Training Bike",
+                    "Exercise Bike",
                     "Electric Bike"
                 ],
                 "sports": [
@@ -153,109 +158,109 @@
             "items": {
                 "Mountain Bike": {
                     "price": "197.00",
-                    "original price": "197.00",
-                    "inventory": 112,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "original price": "254.00",
+                    "inventory": 6,
+                    "sold this week": 10,
+                    "sold last week": 6,
                     "rating": 5,
                     "image": "./images/Mountain_Bike.JPG"
                 },
-                "Training Bike": {
-                    "price": "198.00",
-                    "original price": "254.00",
-                    "inventory": 10,
+                "Exercise Bike": {
+                    "price": "399.00",
+                    "original price": "399.00",
+                    "inventory": 5,
                     "sold this week": 6,
                     "sold last week": 4,
                     "rating": 3,
-                    "image": "./images/Training_Bike.JPG"
+                    "image": "./images/Exercise_Bike.JPG"
                 },
                 "Electric Bike": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "price": "432.00",
+                    "original price": "519.00",
+                    "inventory": 3,
+                    "sold this week": 3,
+                    "sold last week": 2,
                     "rating": 5,
                     "image": "./images/Electric_Bike.JPG"
                 },
                 "Basketball": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "price": "10.97",
+                    "original price": "14.97",
+                    "inventory": 63,
+                    "sold this week": 45,
+                    "sold last week": 43,
                     "rating": 5,
                     "image": "./images/basketball.JPG"
                 },
                 "Basketball Hoop": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "price": "147.32",
+                    "original price": "147.32",
+                    "inventory": 2,
+                    "sold this week": 3,
+                    "sold last week": 2,
                     "rating": 4,
                     "image": "./images/Basketball_Hoop.JPG"
                 },
                 "Football": {
-                    "price": "197.00",
-                    "original price": "254.00",
+                    "price": "9.99",
+                    "original price": "9.99",
                     "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "sold this week": 34,
+                    "sold last week": 32,
                     "rating": 3,
                     "image": "./images/Football.JPG"
                 },
                 "Football Helmet": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
+                    "price": "179.00",
+                    "original price": "179.00",
+                    "inventory": 4,
                     "sold this week": 6,
-                    "sold last week": 4,
+                    "sold last week": 5,
                     "rating": 5,
                     "image": "./images/Football_Helmet.JPG"
                 },
                 "Volleyball": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "price": "18.99",
+                    "original price": "18.99",
+                    "inventory": 34,
+                    "sold this week": 30,
+                    "sold last week": 32,
                     "rating": 5,
                     "image": "./images/Volleyball.JPG"
                 },
                 "Baseball": {
-                    "price": "254.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "price": "2.99",
+                    "original price": "2.99",
+                    "inventory": 134,
+                    "sold this week": 342,
+                    "sold last week": 435,
                     "rating": 4,
                     "image": "./images/Baseball.JPG"
                 },
                 "Baseball Bat": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "price": "22.99",
+                    "original price": "22.99",
+                    "inventory": 43,
+                    "sold this week": 103,
+                    "sold last week": 79,
                     "rating": 3,
                     "image": "./images/Baseball_Bat.JPG"
                 },
                 "Softball": {
-                    "price": "197.00",
-                    "original price": "254.00",
-                    "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "price": "3.99",
+                    "original price": "3.99",
+                    "inventory": 92,
+                    "sold this week": 93,
+                    "sold last week": 152,
                     "rating": 3,
                     "image": "./images/Softball.JPG"
                 },
                 "Softball Bat": {
-                    "price": "197.00",
-                    "original price": "254.00",
+                    "price": "29.99",
+                    "original price": "29.99",
                     "inventory": 10,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "sold this week": 25,
+                    "sold last week": 21,
                     "rating": 4,
                     "image": "./images/Softball_Bat.JPG"
                 }
@@ -348,7 +353,7 @@
                     "rating": 4,
                     "image": "./images/Black_Jacket.JPG"
                 },
-                "Long_Sleeve_Shirt": {
+                "Long Sleeve Shirt": {
                     "price": "21.00",
                     "original price": "24.99",
                     "inventory": 142,

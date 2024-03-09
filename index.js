@@ -1,14 +1,118 @@
 let pageName = document.documentElement.getAttribute("pageName")
 
+if(pageName === "Product Page") {
+    const searchParams = new URLSearchParams(window.location.search);
+
+    pageName = searchParams.get("page")
+    item = searchParams.get("product")
+
+    function renderPage(pages) {
+        let title = document.querySelector("title")
+    
+        title.innerHTML = item
+    
+        let page = document.getElementById("page")
+    
+        let itemInfo = pages["pages"][pageName]["items"]
+    
+        let navbar = document.getElementById("navbar");
+        renderNavbar(pages, navbar);
+    
+        renderItem(itemInfo, page);
+    }
+
+    function renderItem(itemInfo, page) {
+        div = document.createElement("div");
+        div.classList.add("item-page");
+
+        let saleChange = parseFloat((parseInt(itemInfo[item]["sold this week"]) - parseInt(itemInfo[item]["sold last week"])) / parseInt(itemInfo[item]["sold last week"]) * 100).toFixed(2);
+
+        let score = parseInt(itemInfo[item]["rating"]);
+        console.log(score);
+
+        let rating = "";
+        for (let i = 0; i < score; i++) {
+            rating += "★";
+        }
+
+        for (let i = 0; i < 5 - score; i++) {
+            rating += "☆";
+        }
+
+        if (itemInfo[item]["price"] != itemInfo[item]["original price"]) {
+            div.innerHTML = `<img src="${itemInfo[item]["image"]}" width=500 height=500><div class="product-view"><h1>${item}</h1><hr><div class="price"><s> $${itemInfo[item]["original price"]}</s> $${itemInfo[item]["price"]}</div><div class="inventory">In Stock: ${itemInfo[item]["inventory"]}</div><hr><div class="popularity">Popularity Change Over the Past Week: ${saleChange}%</div><div class="rating">${rating}</div></div>`;
+        } else {
+            div.innerHTML = `<img src="${itemInfo[item]["image"]}" width=500 height=500><div class="product-view"><h1>${item}</h1><hr><div class="price">$${itemInfo[item]["price"]}</div><div class="inventory">In Stock: ${itemInfo[item]["inventory"]}</div><hr><div class="popularity">Popularity Change Over the Past Week: ${saleChange}%</div><div class="rating">${rating}</div></div>`;
+        }
+        page.appendChild(div);
+    }
+} else if (pageName === "Home") {
+    function renderPage(pages) {
+        navbar = document.getElementById("navbar");
+        renderNavbar(pages, navbar); 
+    }
+} else {
+    function renderPage(pages){
+        information = pages;
+    
+        sortSelect = document.getElementById("sort-select-values");
+    
+        renderSortOptions(pages);
+    
+        let navbar = document.getElementById("navbar");
+        renderNavbar(pages, navbar);
+
+        let sidebar = document.getElementById("filters");
+        renderSidebar(sidebar, pages);
+    
+        page = document.getElementById("page")
+        itemInfo = pages["pages"][pageName]["items"]
+        for(let item in itemInfo){
+            displayItem(item, itemInfo, page);
+        }
+    
+        sortElements(sortingPriority);
+    }
+
+    document.getElementById("sort-select-values").addEventListener("change", function() {
+        changeSort(this.value);
+    });
+}
+
 let filters = [];
 let displayedItems = [];
 let information;
 
 let sortingPriority;
 
-document.getElementById("sort-select-values").addEventListener("change", function() {
-    changeSort(this.value);
-});
+function renderSortOptions(pages) {
+    for (let sortOption in pages["pages"][pageName]["sortOptions"]) {
+        if (sortingPriority == null) {
+            sortingPriority = pages["pages"][pageName]["sortOptions"][sortOption];
+        }
+        sortElement = document.createElement("option");
+        sortElement.value = sortOption;
+        sortElement.textContent = sortOption;
+        sortSelect.appendChild(sortElement);
+    }
+}
+
+function renderSidebar(sidebar, pages) {
+    for (let filter in pages["pages"][pageName]["filters"]) {
+        filterDiv = document.createElement("div");
+        filterDiv.innerHTML = `<button id="${filter}", type="button", onclick="changeFilters('${filter}')">${filter}</button>`;
+        sidebar.appendChild(filterDiv);
+    }
+}
+
+function renderNavbar(pages, navbar) {
+    for (let pageName in pages["pages"]) {
+        listElement = document.createElement("li");
+        listElement.className = "navbar";
+        listElement.innerHTML = `<a href="${pages["pages"][pageName]["fileName"]}">${pageName}</a>`;
+        navbar.appendChild(listElement);
+    }
+}
 
 function changeSort(sortSelect){
     sortingPriority = information["pages"][pageName]["sortOptions"][sortSelect];
@@ -115,44 +219,6 @@ function changeFilters(filter){
     }
  
     sortElements(sortingPriority)
-}
-
-function renderPage(pages){
-    information = pages;
-
-    sortSelect = document.getElementById("sort-select-values");
-
-    for (let sortOption in pages["pages"][pageName]["sortOptions"]){
-        if(sortingPriority == null){
-            sortingPriority = pages["pages"][pageName]["sortOptions"][sortOption];
-        }
-        sortElement = document.createElement("option");
-        sortElement.value = sortOption;
-        sortElement.textContent = sortOption;
-        sortSelect.appendChild(sortElement);
-    }
-
-    navbar = document.getElementById("navbar");
-    for (let pageName in pages["pages"]){
-        listElement = document.createElement("li")
-        listElement.className = "navbar"
-        listElement.innerHTML = `<a href="${pages["pages"][pageName]["fileName"]}">${pageName}</a>`
-        navbar.appendChild(listElement)
-    }
-    sidebar = document.getElementById("filters");
-    for(let filter in pages["pages"][pageName]["filters"]){
-        filterDiv = document.createElement("div");
-        filterDiv.innerHTML = `<button id="${filter}", type="button", onclick="changeFilters('${filter}')">${filter}</button>`
-        sidebar.appendChild(filterDiv);
-    }
-
-    page = document.getElementById("page")
-    itemInfo = pages["pages"][pageName]["items"]
-    for(let item in itemInfo){
-        displayItem(item, itemInfo, page);
-    }
-
-    sortElements(sortingPriority);
 }
  
 function displayItem(item, itemInfo, page) {

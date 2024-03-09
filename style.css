@@ -6,37 +6,29 @@ html,body {
   font-family: sans-serif;
 }
 
-/* The sidebar menu */
 #filters {
   height: 100%;
   width: 200px;
-  /* Set the width of the sidebar */
   position: fixed;
-  /* Fixed Sidebar (stay in place on scroll) */
   z-index: 0;
-  /* Stay on top */
   top: 0px;
   left: 0px;
   bottom: 0px;
   background-color: #5f5d5d;
-  /* Black */
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   padding-top: 50px;
 }
 
-/* The navigation menu links */
 #filters button {
   padding: 6px 8px 6px 16px;
   margin-bottom: 10px;
-  width: 120px;
+  width: 180px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
 }
 
-/* When you mouse over the navigation links, change their color */
 #filters button:hover {
   color: #f1f1f1;
 }
@@ -49,10 +41,8 @@ html,body {
   display: block;
 }
 
-/* Style page content */
 #page {
   margin-left: 200px;
-  /* Same as the width of the sidebar */
   padding: 0px 10px;
   display: inline-block;
 }
@@ -67,17 +57,8 @@ html,body {
 
 #navbar {
   list-style-type: none;
-  margin: 0;
-  margin-left: 200px;
-  padding: 0;
   display: inline;
-}
-
-#navbar-product {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline;
+  float:center;
 }
 
 li.navbar {
@@ -181,6 +162,47 @@ s {
 
   div.rating {
     margin-top: 50px;
-    font-size:30px;
+    font-size:100px;
+    text-align:center;
   }
+}
+
+a.home {
+  text-decoration: none;
+  text-align: left;
+  color: rgb(69, 117, 189);
+  float:left;
+}
+
+a.category {
+  margin-left:200px;
+}
+
+a.about {
+  text-decoration: none;
+  text-align: left;
+  color: rgb(69, 117, 189);
+  float:right;
+}
+
+ul.main{
+  display: inline;
+}
+
+#sales {
+  float:left;
+}
+
+#trending-items {
+  float:right;
+}
+
+div.main{
+  margin-top:20px;
+  float:left;
+  margin-left:5%;
+}
+
+div.sales{
+  width: 50%; 
 }
