@@ -1,11 +1,12 @@
 {
     "home": {
         "trending-items": {
-            "Mountain Bike":"Sporting Goods",
+            "Beige Sneakers": "Apparel",
             "Football": "Sporting Goods",
+            "Mountain Bike":"Sporting Goods",
             "Apple": "Grocery",
-            "Blue Jeans": "Apparel",
-            "Sunglasses": "Apparel"
+            "Sunglasses": "Apparel",
+            "Blue Jeans": "Apparel"
         }
     },
     "pages": {

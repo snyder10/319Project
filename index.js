@@ -54,19 +54,22 @@ if(pageName === "Product Page") {
         let trendingItems = document.getElementById("trending-items");
         let trendData = pages["home"]["trending-items"];
 
+        let pageInfo = pages["pages"];
+
         for(let item in trendData){
             li = document.createElement("li");
-            li.innerHTML = `${item}`;
+            page = trendData[item];
+            let saleChange = parseFloat((parseInt(pageInfo[page]["items"][item]["sold this week"]) - parseInt(pageInfo[page]["items"][item]["sold last week"])) / parseInt(pageInfo[page]["items"][item]["sold last week"]) * 100).toFixed(2);
+            li.innerHTML = `<a href="./productPage.html?page=${page}&product=${item}" style="text-decoration:none; color: black;">${item}<div style="float:right;"><span style="color:green;">+${saleChange}%</span></div><hr></a>`;
             trendingItems.appendChild(li);
         }
 
         let sales = document.getElementById("sales")
-        let pageInfo = pages["pages"];
 
-        for(page in pageInfo){
+        for(let page in pageInfo){
             for(let item of pageInfo[page]["filters"]["Deals"]){
                 li = document.createElement("li");
-                li.innerHTML = `${item} <div style="float:right;"><s>${pageInfo[page]["items"][item]["original price"]}</s> → ${pageInfo[page]["items"][item]["price"]}</div><hr>`;
+                li.innerHTML = `<a href="./productPage.html?page=${page}&product=${item}" style="text-decoration:none; color: black;">${item} <div style="float:right;"><s>$${pageInfo[page]["items"][item]["original price"]}</s> → <span style="color:green;">$${pageInfo[page]["items"][item]["price"]}</span></div><hr></a>`;
                 sales.appendChild(li);
             }
         }

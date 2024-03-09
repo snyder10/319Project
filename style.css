@@ -192,19 +192,24 @@ ul.main{
 #sales {
   float:left;
   list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 #trending-items {
   float:right;
   list-style-type:none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 div.main{
   margin-top:20px;
   float:left;
-  margin-left:5%;
+  margin-right:0px;
+  width: 45%;
 }
 
 div.sales{
-  width: 50%; 
+  margin-left: 5%;
 }
