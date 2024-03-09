@@ -42,7 +42,7 @@
                     "sold this week": 121,
                     "sold last week": 67,
                     "rating": 3,
-                    "image": "./images/Apple.JPG"
+                    "image": "images/Apple.JPG"
                 },
                 "Banana": {
                     "price": "0.31/lb",
@@ -51,7 +51,7 @@
                     "sold this week": 10,
                     "sold last week": 45,
                     "rating": 5,
-                    "image": "./images/Banana.JPG"
+                    "image": "images/Banana.JPG"
                 },
                 "Orange": {
                     "price": "3.62/lb",
@@ -60,7 +60,7 @@
                     "sold this week": 8,
                     "sold last week": 20,
                     "rating": 4,
-                    "image": "./images/Orange.JPG"
+                    "image": "images/Orange.JPG"
                 },
                 "White Bread": {
                     "price": "1.79",
@@ -69,7 +69,7 @@
                     "sold this week": 75,
                     "sold last week": 67,
                     "rating": 3,
-                    "image": "./images/White_Bread.JPG"
+                    "image": "images/White_Bread.JPG"
                 },
                 "Canned Tuna": {
                     "price": "1.99",
@@ -78,7 +78,7 @@
                     "sold this week": 1,
                     "sold last week": 4,
                     "rating": 1,
-                    "image": "./images/Canned_Tuna.JPG"
+                    "image": "images/Canned_Tuna.JPG"
                 },
                 "Hot Dog Buns": {
                     "price": "1.59",
@@ -87,7 +87,7 @@
                     "sold this week": 75,
                     "sold last week": 106,
                     "rating": 3,
-                    "image": "./images/Hot_Dog_Buns.JPG"
+                    "image": "images/Hot_Dog_Buns.JPG"
                 },
                 "Whole Wheat Bread": {
                     "price": "2.29",
@@ -96,7 +96,7 @@
                     "sold this week": 41,
                     "sold last week": 52,
                     "rating": 4,
-                    "image": "./images/Whole_Wheat_Bread.JPG"
+                    "image": "images/Whole_Wheat_Bread.JPG"
                 },
                 "Chicken Thigh": {
                     "price": "2.99/lb",
@@ -105,7 +105,7 @@
                     "sold this week": 48,
                     "sold last week": 66,
                     "rating": 5,
-                    "image": "./images/Chicken_Thigh.JPG"
+                    "image": "images/Chicken_Thigh.JPG"
                 },
                 "85% Lean Ground Beef": {
                     "price": "4.69/lb",
@@ -114,7 +114,7 @@
                     "sold this week": 75,
                     "sold last week": 72,
                     "rating": 4,
-                    "image": "./images/85_Lean_Beef.JPG"
+                    "image": "images/85_Lean_Beef.JPG"
                 }
             },
             "sortOptions":{
@@ -173,7 +173,7 @@
                     "sold this week": 10,
                     "sold last week": 6,
                     "rating": 5,
-                    "image": "./images/Mountain_Bike.JPG"
+                    "image": "images/Mountain_Bike.JPG"
                 },
                 "Exercise Bike": {
                     "price": "399.00",
@@ -182,7 +182,7 @@
                     "sold this week": 6,
                     "sold last week": 4,
                     "rating": 3,
-                    "image": "./images/Exercise_Bike.JPG"
+                    "image": "images/Exercise_Bike.JPG"
                 },
                 "Electric Bike": {
                     "price": "432.00",
@@ -191,7 +191,7 @@
                     "sold this week": 2,
                     "sold last week": 2,
                     "rating": 5,
-                    "image": "./images/Electric_Bike.JPG"
+                    "image": "images/Electric_Bike.JPG"
                 },
                 "Basketball": {
                     "price": "10.97",
@@ -200,7 +200,7 @@
                     "sold this week": 45,
                     "sold last week": 43,
                     "rating": 5,
-                    "image": "./images/Basketball.JPG"
+                    "image": "images/Basketball.JPG"
                 },
                 "Basketball Hoop": {
                     "price": "147.32",
@@ -209,7 +209,7 @@
                     "sold this week": 3,
                     "sold last week": 2,
                     "rating": 4,
-                    "image": "./images/Basketball_Hoop.JPG"
+                    "image": "images/Basketball_Hoop.JPG"
                 },
                 "Football": {
                     "price": "9.99",
@@ -218,7 +218,7 @@
                     "sold this week": 34,
                     "sold last week": 15,
                     "rating": 3,
-                    "image": "./images/Football.JPG"
+                    "image": "images/Football.JPG"
                 },
                 "Football Helmet": {
                     "price": "179.00",
@@ -227,7 +227,7 @@
                     "sold this week": 6,
                     "sold last week": 5,
                     "rating": 5,
-                    "image": "./images/Football_Helmet.JPG"
+                    "image": "images/Football_Helmet.JPG"
                 },
                 "Volleyball": {
                     "price": "18.99",
@@ -236,7 +236,7 @@
                     "sold this week": 30,
                     "sold last week": 32,
                     "rating": 5,
-                    "image": "./images/Volleyball.JPG"
+                    "image": "images/Volleyball.JPG"
                 },
                 "Baseball": {
                     "price": "2.99",
@@ -245,7 +245,7 @@
                     "sold this week": 342,
                     "sold last week": 435,
                     "rating": 4,
-                    "image": "./images/Baseball.JPG"
+                    "image": "images/Baseball.JPG"
                 },
                 "Baseball Bat": {
                     "price": "22.99",
@@ -254,7 +254,7 @@
                     "sold this week": 103,
                     "sold last week": 79,
                     "rating": 3,
-                    "image": "./images/Baseball_Bat.JPG"
+                    "image": "images/Baseball_Bat.JPG"
                 },
                 "Softball": {
                     "price": "3.99",
@@ -263,7 +263,7 @@
                     "sold this week": 93,
                     "sold last week": 152,
                     "rating": 3,
-                    "image": "./images/Softball.JPG"
+                    "image": "images/Softball.JPG"
                 },
                 "Softball Bat": {
                     "price": "29.99",
@@ -272,7 +272,7 @@
                     "sold this week": 25,
                     "sold last week": 21,
                     "rating": 4,
-                    "image": "./images/Softball_Bat.JPG"
+                    "image": "images/Softball_Bat.JPG"
                 }
             },
             "sortOptions":{
@@ -332,7 +332,7 @@
                     "sold this week": 62,
                     "sold last week": 44,
                     "rating": 5,
-                    "image": "./images/Black_Shoes.JPG"
+                    "image": "images/Black_Shoes.JPG"
                 },
                 "White Shoes": {
                     "price": "45.99",
@@ -341,7 +341,7 @@
                     "sold this week": 81,
                     "sold last week": 72,
                     "rating": 5,
-                    "image": "./images/White_Shoes.JPG"
+                    "image": "images/White_Shoes.JPG"
                 },
                 "Blue Jeans": {
                     "price": "25.00",
@@ -350,7 +350,7 @@
                     "sold this week": 62,
                     "sold last week": 40,
                     "rating": 5,
-                    "image": "./images/Jeans.png"
+                    "image": "images/Jeans.png"
                 },
                 "Beige Sneakers": {
                     "price": "27.99",
@@ -359,7 +359,7 @@
                     "sold this week": 134,
                     "sold last week": 52,
                     "rating": 3,
-                    "image": "./images/Beige_Sneakers.JPG"
+                    "image": "images/Beige_Sneakers.JPG"
                 },
                 "Black Jacket": {
                     "price": "35.99",
@@ -368,7 +368,7 @@
                     "sold this week": 42,
                     "sold last week": 35,
                     "rating": 4,
-                    "image": "./images/Black_Jacket.JPG"
+                    "image": "images/Black_Jacket.JPG"
                 },
                 "Long Sleeve Shirt": {
                     "price": "21.00",
@@ -377,7 +377,7 @@
                     "sold this week": 75,
                     "sold last week": 52,
                     "rating": 5,
-                    "image": "./images/Long_Sleeve_Shirt.JPG"
+                    "image": "images/Long_Sleeve_Shirt.JPG"
                 },
                 "Sunglasses": {
                     "price": "157.00",
@@ -386,7 +386,7 @@
                     "sold this week": 100,
                     "sold last week": 63,
                     "rating": 4,
-                    "image": "./images/Sun_Glasses.JPG"
+                    "image": "images/Sun_Glasses.JPG"
                 },
                 "Leather Hat": {
                     "price": "21.49",
@@ -395,7 +395,7 @@
                     "sold this week": 25,
                     "sold last week": 20,
                     "rating": 5,
-                    "image": "./images/Leather_Hat.jpg"
+                    "image": "images/Leather_Hat.jpg"
                 },
                 "Wrist Watch": {
                     "price": "1859.00",
@@ -404,7 +404,7 @@
                     "sold this week": 1,
                     "sold last week": 1,
                     "rating": 5,
-                    "image": "./images/Wrist_Watch.JPG"
+                    "image": "images/Wrist_Watch.JPG"
                 }
             },
             "sortOptions":{
