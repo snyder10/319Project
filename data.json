@@ -350,7 +350,7 @@
                     "sold this week": 62,
                     "sold last week": 40,
                     "rating": 5,
-                    "image": "./images/Blue_Jeans.JPG"
+                    "image": "./images/Jeans.png"
                 },
                 "Beige Sneakers": {
                     "price": "27.99",
@@ -395,7 +395,7 @@
                     "sold this week": 25,
                     "sold last week": 20,
                     "rating": 5,
-                    "image": "./images/Leather_Hat.JPG"
+                    "image": "./images/Leather_Hat.jpg"
                 },
                 "Wrist Watch": {
                     "price": "1859.00",
