@@ -1,7 +1,11 @@
 {
     "home": {
         "trending-items": {
-            "":""
+            "Mountain Bike":"Sporting Goods",
+            "Football": "Sporting Goods",
+            "Apple": "Grocery",
+            "Blue Jeans": "Apparel",
+            "Sunglasses": "Apparel"
         }
     },
     "pages": {
@@ -34,7 +38,7 @@
                     "price": "1.59/lb",
                     "original price": "1.79/lb",
                     "inventory": 230,
-                    "sold this week": 75,
+                    "sold this week": 121,
                     "sold last week": 67,
                     "rating": 3,
                     "image": "./images/Apple.JPG"
@@ -97,7 +101,7 @@
                     "price": "2.99/lb",
                     "original price": "3.29/lb",
                     "inventory": 75,
-                    "sold this week": 41,
+                    "sold this week": 48,
                     "sold last week": 66,
                     "rating": 5,
                     "image": "./images/Chicken_Thigh.JPG"
@@ -106,7 +110,7 @@
                     "price": "4.69/lb",
                     "original price": "4.69/lb",
                     "inventory": 113,
-                    "sold this week": 60,
+                    "sold this week": 75,
                     "sold last week": 72,
                     "rating": 4,
                     "image": "./images/85_Lean_Beef.JPG"
@@ -183,7 +187,7 @@
                     "price": "432.00",
                     "original price": "519.00",
                     "inventory": 3,
-                    "sold this week": 3,
+                    "sold this week": 2,
                     "sold last week": 2,
                     "rating": 5,
                     "image": "./images/Electric_Bike.JPG"
@@ -211,7 +215,7 @@
                     "original price": "9.99",
                     "inventory": 10,
                     "sold this week": 34,
-                    "sold last week": 32,
+                    "sold last week": 15,
                     "rating": 3,
                     "image": "./images/Football.JPG"
                 },
@@ -316,7 +320,7 @@
                     "Leather Hat",
                     "Blue Jeans",
                     "Beige Sneakers",
-                    "Sun Glasses"
+                    "Sunglasses"
                 ]
             },
             "items": {
@@ -324,8 +328,8 @@
                     "price": "45.99",
                     "original price": "45.99",
                     "inventory": 12,
-                    "sold this week": 2,
-                    "sold last week": 4,
+                    "sold this week": 62,
+                    "sold last week": 44,
                     "rating": 5,
                     "image": "./images/Black_Shoes.JPG"
                 },
@@ -333,8 +337,8 @@
                     "price": "45.99",
                     "original price": "45.99",
                     "inventory": 14,
-                    "sold this week": 1,
-                    "sold last week": 7,
+                    "sold this week": 81,
+                    "sold last week": 72,
                     "rating": 5,
                     "image": "./images/White_Shoes.JPG"
                 },
@@ -342,8 +346,8 @@
                     "price": "25.00",
                     "original price": "37.99",
                     "inventory": 112,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "sold this week": 62,
+                    "sold last week": 40,
                     "rating": 5,
                     "image": "./images/Blue_Jeans.JPG"
                 },
@@ -351,8 +355,8 @@
                     "price": "27.99",
                     "original price": "29.99",
                     "inventory": 53,
-                    "sold this week": 7,
-                    "sold last week": 4,
+                    "sold this week": 134,
+                    "sold last week": 52,
                     "rating": 3,
                     "image": "./images/Beige_Sneakers.JPG"
                 },
@@ -360,8 +364,8 @@
                     "price": "35.99",
                     "original price": "35.99",
                     "inventory": 41,
-                    "sold this week": 6,
-                    "sold last week": 2,
+                    "sold this week": 42,
+                    "sold last week": 35,
                     "rating": 4,
                     "image": "./images/Black_Jacket.JPG"
                 },
@@ -369,17 +373,17 @@
                     "price": "21.00",
                     "original price": "24.99",
                     "inventory": 142,
-                    "sold this week": 7,
-                    "sold last week": 11,
+                    "sold this week": 75,
+                    "sold last week": 52,
                     "rating": 5,
                     "image": "./images/Long_Sleeve_Shirt.JPG"
                 },
-                "Sun Glasses": {
+                "Sunglasses": {
                     "price": "157.00",
                     "original price": "197.00",
-                    "inventory": 15,
-                    "sold this week": 0,
-                    "sold last week": 1,
+                    "inventory": 72,
+                    "sold this week": 100,
+                    "sold last week": 63,
                     "rating": 4,
                     "image": "./images/Sun_Glasses.JPG"
                 },
@@ -387,8 +391,8 @@
                     "price": "21.49",
                     "original price": "26.00",
                     "inventory": 53,
-                    "sold this week": 6,
-                    "sold last week": 4,
+                    "sold this week": 25,
+                    "sold last week": 20,
                     "rating": 5,
                     "image": "./images/Leather_Hat.JPG"
                 },
@@ -396,8 +400,8 @@
                     "price": "1859.00",
                     "original price": "1859.00",
                     "inventory": 1,
-                    "sold this week": 0,
-                    "sold last week": 0,
+                    "sold this week": 1,
+                    "sold last week": 1,
                     "rating": 5,
                     "image": "./images/Wrist_Watch.JPG"
                 }

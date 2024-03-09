@@ -48,8 +48,28 @@ if(pageName === "Product Page") {
     }
 } else if (pageName === "Home") {
     function renderPage(pages) {
-        navbar = document.getElementById("navbar");
+        let navbar = document.getElementById("navbar");
         renderNavbar(pages, navbar); 
+
+        let trendingItems = document.getElementById("trending-items");
+        let trendData = pages["home"]["trending-items"];
+
+        for(let item in trendData){
+            li = document.createElement("li");
+            li.innerHTML = `${item}`;
+            trendingItems.appendChild(li);
+        }
+
+        let sales = document.getElementById("sales")
+        let pageInfo = pages["pages"];
+
+        for(page in pageInfo){
+            for(let item of pageInfo[page]["filters"]["Deals"]){
+                li = document.createElement("li");
+                li.innerHTML = `${item} <div style="float:right;"><s>${pageInfo[page]["items"][item]["original price"]}</s> → ${pageInfo[page]["items"][item]["price"]}</div><hr>`;
+                sales.appendChild(li);
+            }
+        }
     }
 } else {
     function renderPage(pages){

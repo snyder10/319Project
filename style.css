@@ -191,10 +191,12 @@ ul.main{
 
 #sales {
   float:left;
+  list-style-type: none;
 }
 
 #trending-items {
   float:right;
+  list-style-type:none;
 }
 
 div.main{
