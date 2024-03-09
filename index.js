@@ -57,19 +57,24 @@ if(pageName === "Product Page") {
         let pageInfo = pages["pages"];
 
         for(let item in trendData){
-            li = document.createElement("li");
-            page = trendData[item];
-            let saleChange = parseFloat((parseInt(pageInfo[page]["items"][item]["sold this week"]) - parseInt(pageInfo[page]["items"][item]["sold last week"])) / parseInt(pageInfo[page]["items"][item]["sold last week"]) * 100).toFixed(2);
-            li.innerHTML = `<a href="./productPage.html?page=${page}&product=${item}" style="text-decoration:none; color: black;">${item}<div style="float:right;"><span style="color:green;">+${saleChange}%</span></div><hr></a>`;
+            let li = document.createElement("li");
+            li.classList.add("items-container")
+            let page = trendData[item];
+            let itemInfo = pageInfo[page]["items"]
+            let saleChange = parseFloat((parseInt(pageInfo[page]["items"][item]["sold this week"]) - parseInt(pageInfo[page]["items"][item]["sold last week"])) / parseInt(pageInfo[page]["items"][item]["sold last week"]) * 100).toFixed(2);            
+            li.innerHTML = `<a href="./productPage.html?page=${pageName}&product=${item}"><div class="item-image"><img src="${itemInfo[item]["image"]}" width=350 height=350 class="item-image"></div><hr><div class="item"><p>${item}</p><p><span style="color:green;">${saleChange}% Increase</span></p></div></a>`
+
             trendingItems.appendChild(li);
         }
 
         let sales = document.getElementById("sales")
 
         for(let page in pageInfo){
-            for(let item of pageInfo[page]["filters"]["Deals"]){
-                li = document.createElement("li");
-                li.innerHTML = `<a href="./productPage.html?page=${page}&product=${item}" style="text-decoration:none; color: black;">${item} <div style="float:right;"><s>$${pageInfo[page]["items"][item]["original price"]}</s> → <span style="color:green;">$${pageInfo[page]["items"][item]["price"]}</span></div><hr></a>`;
+            for(let item of pageInfo[page]["filters"]["Sales"]){
+                let li = document.createElement("li");
+                li.classList.add("items-container")
+                let itemInfo = pageInfo[page]["items"]
+                li.innerHTML = `<a href="./productPage.html?page=${pageName}&product=${item}"><div class="item-image"><img src="${itemInfo[item]["image"]}" width=350 height=350 class="item-image"></div><hr><div class="item"><p>${item}</p><p><s>$${pageInfo[page]["items"][item]["original price"]}</s> → <span style="color:green;">$${pageInfo[page]["items"][item]["price"]}</span></p></div></a>`
                 sales.appendChild(li);
             }
         }

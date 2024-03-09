@@ -3,8 +3,8 @@
         "trending-items": {
             "Beige Sneakers": "Apparel",
             "Football": "Sporting Goods",
-            "Mountain Bike":"Sporting Goods",
             "Apple": "Grocery",
+            "Mountain Bike":"Sporting Goods",
             "Sunglasses": "Apparel",
             "Blue Jeans": "Apparel"
         }
@@ -28,7 +28,7 @@
                     "Canned Tuna",
                     "15% Lean Ground Beef"
                 ],
-                "Deals": [
+                "Sales": [
                     "Apple",
                     "Hot Dog Buns",
                     "Chicken Thigh"
@@ -159,7 +159,7 @@
                     "Softball",
                     "Softball Bat"
                 ],
-                "Deals": [
+                "Sales": [
                     "Basketball",
                     "Mountain Bike",
                     "Electric Bike"
@@ -316,7 +316,7 @@
                     "Leather Hat",
                     "Wrist Watch"
                 ],
-                "Deals": [
+                "Sales": [
                     "Long Sleeve Shirt",
                     "Leather Hat",
                     "Blue Jeans",
