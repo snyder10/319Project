@@ -171,21 +171,17 @@ function sortElements(sortPriority){
 
         for (let i = 0; i < sortPriority.length; i++) {
             let prop = sortPriority[i]["priority"];
-            console.log(prop);
             let first;
             let second;
             if (sortPriority[i]["direction"] === "ascending"){
                 first = a;
                 second = b;
             } else {
-                console.log("test")
                 first = b;
                 second = a;
             }
-            console.log(first[prop] + " " + second[prop]);
             if (first[prop] !== second[prop]) {
                 if(prop === "price" || prop === "inventory") {
-                    console.log(first[prop] - second[prop])
                     return first[prop] - second[prop];
                 } else {
                     return first[prop].localeCompare(second[prop], undefined, { sensitivity: 'base' });
