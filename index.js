@@ -3,8 +3,8 @@ let pageName = document.documentElement.getAttribute("pageName")
 if(pageName === "Product Page") {
     const searchParams = new URLSearchParams(window.location.search);
 
-    pageName = searchParams.get("page")
-    item = searchParams.get("product")
+    let page_name = searchParams.get("page")
+    let item = searchParams.get("product")
 
     function renderPage(pages) {
         let title = document.querySelector("title")
@@ -13,7 +13,7 @@ if(pageName === "Product Page") {
     
         let page = document.getElementById("page")
     
-        let itemInfo = pages["pages"][pageName]["items"]
+        let itemInfo = pages["pages"][page_name]["items"]
     
         let navbar = document.getElementById("navbar");
         renderNavbar(pages, navbar);
@@ -28,7 +28,6 @@ if(pageName === "Product Page") {
         let saleChange = parseFloat((parseInt(itemInfo[item]["sold this week"]) - parseInt(itemInfo[item]["sold last week"])) / parseInt(itemInfo[item]["sold last week"]) * 100).toFixed(2);
 
         let score = parseInt(itemInfo[item]["rating"]);
-        console.log(score);
 
         let rating = "";
         for (let i = 0; i < score; i++) {
@@ -62,7 +61,7 @@ if(pageName === "Product Page") {
             let page = trendData[item];
             let itemInfo = pageInfo[page]["items"]
             let saleChange = parseFloat((parseInt(pageInfo[page]["items"][item]["sold this week"]) - parseInt(pageInfo[page]["items"][item]["sold last week"])) / parseInt(pageInfo[page]["items"][item]["sold last week"]) * 100).toFixed(2);            
-            li.innerHTML = `<a href="./productPage.html?page=${pageName}&product=${item}"><div class="item-image"><img src="${itemInfo[item]["image"]}" width=350 height=350 class="item-image"></div><hr><div class="item"><p>${item}</p><p><span style="color:green;">${saleChange}% Increase</span></p></div></a>`
+            li.innerHTML = `<a href="./productPage.html?page=${page}&product=${item}"><div class="item-image"><img src="${itemInfo[item]["image"]}" width=350 height=350 class="item-image"></div><hr><div class="item"><p>${item}</p><p><span style="color:green;">${saleChange}% Increase</span></p></div></a>`
 
             trendingItems.appendChild(li);
         }
@@ -74,7 +73,7 @@ if(pageName === "Product Page") {
                 let li = document.createElement("li");
                 li.classList.add("items-container")
                 let itemInfo = pageInfo[page]["items"]
-                li.innerHTML = `<a href="./productPage.html?page=${pageName}&product=${item}"><div class="item-image"><img src="${itemInfo[item]["image"]}" width=350 height=350 class="item-image"></div><hr><div class="item"><p>${item}</p><p><s>$${pageInfo[page]["items"][item]["original price"]}</s> → <span style="color:green;">$${pageInfo[page]["items"][item]["price"]}</span></p></div></a>`
+                li.innerHTML = `<a href="./productPage.html?page=${page}&product=${item}"><div class="item-image"><img src="${itemInfo[item]["image"]}" width=350 height=350 class="item-image"></div><hr><div class="item"><p>${item}</p><p><s>$${pageInfo[page]["items"][item]["original price"]}</s> → <span style="color:green;">$${pageInfo[page]["items"][item]["price"]}</span></p></div></a>`
                 sales.appendChild(li);
             }
         }
@@ -98,8 +97,8 @@ if(pageName === "Product Page") {
         let sidebar = document.getElementById("filters");
         renderSidebar(sidebar, pages);
     
-        page = document.getElementById("page")
-        itemInfo = pages["pages"][pageName]["items"]
+        let page = document.getElementById("page")
+        let itemInfo = pages["pages"][pageName]["items"]
         for(let item in itemInfo){
             displayItem(item, itemInfo, page);
         }
@@ -132,17 +131,17 @@ function renderSortOptions(pages) {
 
 function renderSidebar(sidebar, pages) {
     for (let filter in pages["pages"][pageName]["filters"]) {
-        filterDiv = document.createElement("div");
+        let filterDiv = document.createElement("div");
         filterDiv.innerHTML = `<button id="${filter}", type="button", onclick="changeFilters('${filter}')">${filter}</button>`;
         sidebar.appendChild(filterDiv);
     }
 }
 
 function renderNavbar(pages, navbar) {
-    for (let pageName in pages["pages"]) {
-        listElement = document.createElement("li");
+    for (let page_name in pages["pages"]) {
+        let listElement = document.createElement("li");
         listElement.className = "navbar";
-        listElement.innerHTML = `<a href="${pages["pages"][pageName]["fileName"]}">${pageName}</a>`;
+        listElement.innerHTML = `<a href="${pages["pages"][page_name]["fileName"]}">${page_name}</a>`;
         navbar.appendChild(listElement);
     }
 }
@@ -206,14 +205,14 @@ function changeFilters(filter){
     let page = document.getElementById("page");
 
     if (filters.includes(filter)){
-        filterButton = document.getElementById(filter);
+        let filterButton = document.getElementById(filter);
         filterButton.classList.remove("pressed");
 
         filters.splice(filters.indexOf(filter), 1)
 
         if(filters.length == 0){
 
-            itemInfo = information["pages"][pageName]["items"]
+            let itemInfo = information["pages"][pageName]["items"]
 
             for (item in itemInfo){
                 if(!displayedItems.includes(item)){
@@ -229,7 +228,7 @@ function changeFilters(filter){
             }
         }
     } else {
-        filterButton = document.getElementById(filter);
+        let filterButton = document.getElementById(filter);
         filterButton.classList.add("pressed");
         if (filters.length == 0){
             let iterableDisplayedItems = displayedItems.slice();
@@ -240,9 +239,9 @@ function changeFilters(filter){
             }
         } else {
 
-            itemInfo = information["pages"][pageName]["items"]
+            let itemInfo = information["pages"][pageName]["items"]
 
-            for (item of information["pages"][pageName]["filters"][filter]){
+            for (let item of information["pages"][pageName]["filters"][filter]){
                 if (!displayedItems.includes(item)){
                     displayItem(item, itemInfo, page);
                 }
@@ -255,7 +254,7 @@ function changeFilters(filter){
 }
  
 function displayItem(item, itemInfo, page) {
-    li = document.createElement("li");
+    let li = document.createElement("li");
     li.id = item.split(" ").join("_");
     li.classList.add("items-container")
     if(itemInfo[item]["price"] != itemInfo[item]["original price"]){
@@ -268,7 +267,7 @@ function displayItem(item, itemInfo, page) {
 }
 
 function removeItem(item, page) {
-    child = document.getElementById(item.split(" ").join("_"))
+    let child = document.getElementById(item.split(" ").join("_"))
     page.removeChild(child);
     displayedItems.splice(displayedItems.indexOf(item), 1);
 }
@@ -277,8 +276,8 @@ function inFilters(item, pages){
     if (filters.length == 0){
         return true;
     }
-    for (filter of filters){
-        for (filteredItem of pages["pages"][pageName]["filters"][filter]){
+    for (let filter of filters){
+        for (let filteredItem of pages["pages"][pageName]["filters"][filter]){
             if (filteredItem === item){
                 return true;
             }
